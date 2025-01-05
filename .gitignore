@@ -1,0 +1,32 @@
+# Derleme sırasında oluşan geçici dosyalar
+**/*.o 
+*.obj
+*.exe
+*.out
+*.dll
+*.so
+*.dylib
+
+# Derleyiciye özgü dosyalar
+*.a
+*.lib
+
+# IDE ve editör geçici dosyaları
+*.swp
+*.swo
+*.tmp
+*.log
+
+# Klasörleri hariç tutma
+/build/
+*/Debug/
+*/Release/
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Diğer
+*.bak
+*.cache
+
