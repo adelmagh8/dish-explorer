@@ -6,7 +6,27 @@
 #define UTILS_H  
 
 void print_utility_message();  
+// Function to filter dishes by category
+Dish* search_by_name(Dish* dishes, int dishes_length, const char* search_value) {
+    // Create a new array to store the filtered dishes
+    Dish* filtered_dishes = (Dish*)malloc(dishes_length * sizeof(Dish));
+    int filtered_count = 0;
 
+    // Iterate through the dishes
+    for (int i = 0; i < dishes_length; i++) {
+        // Check if the category name matches the filter
+        if (strcmp(dishes[i].name, search_value) == 0) {
+            // Copy the dish to the filtered array
+            filtered_dishes[filtered_count] = dishes[i];
+            filtered_count++;
+        }
+    }
+
+    // Resize the filtered array to the actual number of filtered dishes
+    filtered_dishes = (Dish*)realloc(filtered_dishes, filtered_count * sizeof(Dish));
+
+    return filtered_dishes;
+}
 
 // Define a struct to represent the country data
 typedef struct {
@@ -58,9 +78,6 @@ Dish* filter_by_category(Dish* dishes, int num_dishes, const char* category_filt
 
     return filtered_dishes;
 }
-
-
-
 
 
 // Function to filter dishes by country
