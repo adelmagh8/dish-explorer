@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "utils.h": "c",
+    "cjson.h": "c",
+    "stdio.h": "c"
+  }
+}

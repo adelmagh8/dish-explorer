@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -g
 TARGET = program
-SRCS = main.c utils.c
+SRCS = main.c
 OBJS = $(SRCS:.c=.o)
 #(TARGET): all
 $(TARGET): $(OBJS)
